@@ -1,0 +1,21 @@
+version: '3.3'
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.3.0/24
+
+services:
+  postgres:
+    image: postgres:12-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: dbcompass
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: example
+      MAX_CONNECTIONS: 300
+    networks:
+      - default
