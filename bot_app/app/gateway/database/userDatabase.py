@@ -13,6 +13,8 @@ class User(Base):
     age = Column(Integer)
     address = Column(String)
 
-#Base.metadata.create_all(engine)
-#todo implementar método para criar tabelas caso elas não existam e não executar o 
-# método Base.metadata.create_all(engine) caso todas as tabelas existam
+'''
+Base.metadata.create_all(engine)
+Todo implementar método para criar tabelas caso elas não existam e não executar o 
+método Base.metadata.create_all(engine) caso todas as tabelas existam
+'''
